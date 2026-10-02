@@ -1,0 +1,123 @@
+export const assets = {
+  heroDay: "/images/6a25da-era-residence_gated-community_day.webp",
+  heroNight: "/images/6a25da-era-residence_gated-community_night.webp",
+  quote: "/images/6a0f8c-img_cam_05_alpha.webp",
+  terrace: "/images/6a1572-era-residence-terrace.webp",
+  location: "/images/6a1518-era-residence-master-plan.webp",
+  coast: "/images/6a5197-loc_path.svg",
+  coastLabels: "/images/6a5197-loc_path_labels.svg",
+  garden: "/images/6a1571-era-residence-garden-2.webp",
+  architecture: "/images/6a0f89-img_cam_02.webp",
+  seaViews: "/images/6a0f88-img_cta_1920.webp",
+};
+export const reasons = [
+  {
+    title: "A GLOBAL WELCOME",
+    image: "/images/6a150a-img_cam_02.webp",
+    text: "Radisson Blu’s international hospitality meets the rhythm of Islamabad, with accommodation and shared spaces designed for business travelers, visiting families and longer stays.",
+  },
+  {
+    title: "WELL CONNECTED",
+    image: "/images/6a150b-era-residence-terrace.webp",
+    text: "An address on Srinagar Highway, close to Islamabad International Airport. Planned for convenient arrivals, onward journeys and a comfortable return at the end of the day.",
+  },
+  {
+    title: "LIFE, ALL TOGETHER",
+    image: "/images/6a150c-era-residence-garden.webp",
+    text: "Dinner, a workout, a meeting or an unhurried evening. Dining, wellness, business facilities and retail are planned alongside your suite or residence.",
+  },
+];
+export const residences = [
+  {
+    title: "Ground floor + basement",
+    bedrooms: "3",
+    area: "178 — 202 m²",
+    image: "/images/6a1514-era-residence-ground-floor-basement.webp",
+    text: "Private basement, direct outdoor access and a dedicated lower level.",
+    type: "ground-floor-basement",
+    link: "Explore Ground + basement",
+  },
+  {
+    title: "Ground Floor",
+    bedrooms: "2",
+    area: "97 — 104 m²",
+    image: "/images/6a1575-era-residence-landscaping.webp",
+    text: "Step directly onto your terrace and into the communal gardens, blending indoor comfort with outdoor living.",
+    type: "ground-floor",
+    link: "Explore Ground floor",
+  },
+  {
+    title: "Penthouse duplex",
+    bedrooms: "2–3",
+    area: "124 — 243 m²",
+    image: "/images/6a1515-era-residence-terrace.webp",
+    text: "Two floors crowned with panoramic views and a private rooftop solarium — the ultimate expression of luxury living.",
+    type: "penthouse-duplex",
+    link: "Explore Penthouses",
+  },
+];
+export const amenities = [
+  {
+    title: "Gated community",
+    image: "/images/6a1512-era-residence-gated-community.webp",
+    text: "Instead of corridors, walking paths connect the apartments — making Era Residence feel closer to a group of private homes than a standard apartment building.",
+  },
+  {
+    title: "Swimming Pool",
+    image: "/images/6a1512-era-residence-pool.webp",
+    text: "Saltwater swimming pool, Children’s pool, Sauna, jacuzzi and wellness shower",
+  },
+  {
+    title: "Parking area",
+    image: "/images/6a1573-era-residence-parking.webp",
+    text: "Each parking space includes pre-installation for optional EV charging.",
+  },
+  {
+    title: "Spa & gym",
+    image: "/images/6a1513-era-residence-spa-and-gym.webp",
+    text: "Designed exclusively for residents and their guests, the amenities at ERA encourage a slower and more balanced Mediterranean lifestyle.",
+  },
+  {
+    title: "Landscaping",
+    image: "/images/6a1513-era-residence-landscaping.webp",
+    text: "The landscaping concept was designed to soften the architecture and strengthen the connection between the residences and the Mediterranean environment.",
+  },
+];
+export const interiors = [
+  "/images/6a1507-img_cam_03.webp",
+  "/images/6a1508-img_cam_07.webp",
+  "/images/6a1508-img_cam_09.webp",
+  "/images/6a1575-era-residence-kitchen.webp",
+];
+export const projectDetails = [
+  { title: "Developer", text: "Swiss Technology S.L." },
+  { title: "Sales & Marketing", text: "Unreal Estate Group" },
+  {
+    title: "License obtained",
+    text: "The project holds all required permits and an active construction license. All documentation is publicly available. Construction is already underway — visit the site in person or follow progress via our live online stream.",
+  },
+  {
+    title: "2026",
+    text: "Currently under construction. The first phase of construction is underway, with ongoing development of the apartments and communal areas. Potential buyers can anticipate a modern living space upon completion of the build.",
+  },
+];
+export const hotspots = [
+  {
+    title: "Crafted to Endure",
+    text: "Natural stone façades were selected for their timeless appearance, durability and ease of maintenance, allowing the architecture to age beautifully over time.",
+    x: "57.5%",
+    y: "62.5%",
+  },
+  {
+    title: "Light & Flow",
+    text: "Terraces, rooftop solariums and expansive openings maximize natural light while creating a seamless indoor outdoor lifestyle.",
+    x: "26.9%",
+    y: "58.3%",
+  },
+  {
+    title: "Your Private Sanctuary",
+    text: "Instead of corridors, walking paths connect the apartments — making Era Residence feel closer to a group of private homes than a standard apartment building.",
+    x: "76.6%",
+    y: "73.2%",
+  },
+];

@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@source "../";
+@import "lenis/dist/lenis.css";
+
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("/fonts/MaisonNeueExt-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("/fonts/MaisonNeueExt-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Original reference font families, bundled for the requested local reconstruction. */
+@font-face {
+  font-family: "Ambroise Francois";
+  src:
+    local("Ambroise Francois Std"),
+    url("/fonts/ambroise-francois-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sloop Script Three";
+  src:
+    local("Sloop Script Three"),
+    url("/fonts/sloop-script-three.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@theme inline {
+  --font-body: "Maison Neue Extended", Arial, sans-serif;
+  --font-display: "Ambroise Francois", "Times New Roman", serif;
+  --font-accent: "Sloop Script Three", cursive;
+  --color-era-plum: #340c24;
+  --color-era-cream: #f3f3ec;
+  --color-era-sky: #b5cedb;
+  --color-era-pink: #f8bbcb;
+  --color-era-ink: #17233b;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+::selection {
+  background: #340c24;
+  color: #f3f3ec;
+}
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+html {
+  scroll-padding-top: 2rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
