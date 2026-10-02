@@ -13,7 +13,7 @@ export default function LifestyleSection() {
   const root = useRef<HTMLElement>(null);
   const photo = useRef<HTMLImageElement>(null);
   const [index, setIndex] = useState(0);
-  useAutoSlide(photo, () => setIndex(i => (i+1)%interiors.length), index);
+  useAutoSlide(photo, () => setIndex((i) => (i + 1) % interiors.length), index);
   useSectionMotion(root, () => {
     gsap.fromTo(
       "[data-life-photo]",
@@ -56,11 +56,11 @@ export default function LifestyleSection() {
       <h2 className="relative z-10 text-center font-display text-[22vw] uppercase leading-[.88] min-[992px]:text-[12vw]">
         The
         <br />
-        space
+        DETAILS
         <br />
-        to
+        OF
         <span className="block -ml-[2.5vw] -mt-[4.5vw] -rotate-12 font-accent normal-case leading-none">
-          Live in
+          living well
         </span>
       </h2>
       <div className="mt-[15vw] grid grid-cols-1 gap-12 min-[992px]:mx-[3vw] min-[992px]:mt-0 min-[992px]:grid-cols-2 min-[992px]:gap-[1vw]">
@@ -74,12 +74,15 @@ export default function LifestyleSection() {
               className="aspect-[3/4] w-full object-cover"
             />
           </div>
-          <Flower variant="04" className="pointer-events-none absolute left-[-3vw] top-[13vw] w-[40vw]" />
+          <Flower
+            variant="04"
+            className="pointer-events-none absolute left-[-3vw] top-[13vw] w-[40vw]"
+          />
           <p className="mx-[8vw] mt-8 text-[11px] font-bold uppercase leading-relaxed min-[992px]:ml-[19vw] min-[992px]:mr-0 min-[992px]:mt-[1vw] min-[992px]:w-[18vw] min-[992px]:text-[.6875vw]">
-            Optional upgrades are available:
-            <br />• Private jacuzzi
-            <br />• EV charging point installation
-            <br />• Photovoltaic panels
+            PLANNED TECHNOLOGY
+            <br />• KNX home automation
+            <br />• SALTO smart access
+            <br />• UniFi Wi-Fi 7 
           </p>
         </div>
         <div>
@@ -87,21 +90,20 @@ export default function LifestyleSection() {
             <img
               data-life-photo
               src={assets.terrace}
-              alt="Sea-view terrace at ERA Residence"
+              alt="Sea-view terrace at Radisson Blu"
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
             />
           </div>
           <div className="px-[8vw] pt-10 min-[992px]:px-0 min-[992px]:pt-[1vw]">
             <Display className="text-[8vw] min-[992px]:w-[37vw] min-[992px]:text-[2.5vw]">
-              Every detail was selected to create homes that feel elegant,
-              intuitive and effortless to live in
+              LIGHT THAT ADAPTS. COMFORT YOU CONTROL. INTERIORS PLANNED TO MAKE
+              EVERYDAY LIVING FEEL A LITTLE MORE PERSONAL.
             </Display>
             <p className="mt-6 text-xs leading-relaxed min-[992px]:ml-[19vw] min-[992px]:mt-[4vw] min-[992px]:w-[18vw] min-[992px]:text-[.8125vw]">
-              Underfloor heating throughout the property. Climate automation
-              systems. Smart lock access systems. Electrically adjustable
-              aluminium shutters. Schneider Electric DLIFE switches and
-              mechanisms.
+              Equipped kitchens, integrated entertainment and smart access
+              complement furnished interiors. The planned specification brings
+              lighting, climate and curtain controls together for everyday ease.
             </p>
             <CircleCTA className="mt-10 min-[992px]:ml-[9.5vw] min-[992px]:mt-[6vw]" />
           </div>
@@ -116,7 +118,7 @@ export default function LifestyleSection() {
           <img
             ref={photo}
             src={interiors[index]}
-            alt={`ERA Residence interior, view ${index + 1}`}
+            alt={`Radisson Blu interior, view ${index + 1}`}
             loading="lazy"
             className="aspect-[1.6] w-full object-cover"
           />

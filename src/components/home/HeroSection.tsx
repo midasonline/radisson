@@ -89,12 +89,12 @@ export default function HeroSection() {
             <img
               src={assets.heroDay}
               fetchPriority="high"
-              alt="ERA Residence gardens and swimming pool in daylight"
+              alt="Radisson Blu gardens and swimming pool in daylight"
               className="absolute inset-0 h-full w-full object-cover object-[50%_top]"
             />
             <img
               src={assets.heroNight}
-              alt="ERA Residence illuminated at night"
+              alt="Radisson Blu illuminated at night"
               className={`absolute inset-0 h-full w-full object-cover object-[50%_top] transition-opacity duration-[1200ms] ${night ? "opacity-100" : "opacity-0"}`}
             />
             <div className="pointer-events-none absolute inset-0 bg-black/15" />

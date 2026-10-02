@@ -8,7 +8,7 @@ import ScrollProgress from "@/components/layout/ScrollProgress";
 import CookieConsent from "@/components/layout/CookieConsent";
 
 export const metadata: Metadata = {
-  title: "ERA Residence — A place to return to",
+  title: "Radisson Blu — A place to return to",
   description: "Contemporary Mediterranean residences in Estepona.",
   robots: { index: false, follow: false },
 };

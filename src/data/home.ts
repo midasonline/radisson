@@ -58,29 +58,29 @@ export const residences = [
 ];
 export const amenities = [
   {
-    title: "Gated community",
+    title: "WELLNESS",
     image: "/images/6a1512-era-residence-gated-community.webp",
-    text: "Instead of corridors, walking paths connect the apartments — making Era Residence feel closer to a group of private homes than a standard apartment building.",
+    text: "A swim, a workout, a slower breath. Planned pool, gym, yoga, sauna and spa facilities make room for your own rhythm.",
   },
   {
-    title: "Swimming Pool",
+    title: "DINING",
     image: "/images/6a1512-era-residence-pool.webp",
-    text: "Saltwater swimming pool, Children’s pool, Sauna, jacuzzi and wellness shower",
+    text: "From rooftop dining to Middle Eastern and Turkish flavors, the planned restaurants create reasons to linger over a meal, a conversation and the view. ",
   },
   {
-    title: "Parking area",
+    title: "BUSINESS",
     image: "/images/6a1573-era-residence-parking.webp",
-    text: "Each parking space includes pre-installation for optional EV charging.",
+    text: "Meeting facilities, coworking areas and business lounges are planned for focused mornings, working conversations and days that move comfortably between appointments. ",
   },
   {
-    title: "Spa & gym",
+    title: "CELEBRATIONS",
     image: "/images/6a1513-era-residence-spa-and-gym.webp",
-    text: "Designed exclusively for residents and their guests, the amenities at ERA encourage a slower and more balanced Mediterranean lifestyle.",
+    text: "A banquet setting for occasions that bring people together, with accommodation and dining planned within the same destination. ",
   },
   {
-    title: "Landscaping",
+    title: "LOUNGES",
     image: "/images/6a1513-era-residence-landscaping.webp",
-    text: "The landscaping concept was designed to soften the architecture and strengthen the connection between the residences and the Mediterranean environment.",
+    text: "A place to pause between arrivals and appointments. Dedicated executive and airline crew lounges form part of the planned hospitality experience.",
   },
 ];
 export const interiors = [

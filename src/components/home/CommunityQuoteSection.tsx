@@ -11,7 +11,7 @@ export default function CommunityQuoteSection() {
         width={1920}
         height={1440}
         src={assets.quote}
-        alt="Pool and Mediterranean planting at ERA Residence"
+        alt="Pool and Mediterranean planting at Radisson Blu"
         loading="lazy"
         className="h-auto w-full"
       />

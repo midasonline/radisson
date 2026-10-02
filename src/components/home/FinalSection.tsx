@@ -41,7 +41,7 @@ export default function FinalSection() {
         <div data-final-image className="absolute inset-0">
           <img
             src={assets.seaViews}
-            alt="Sea views from an ERA Residence rooftop terrace"
+            alt="Sea views from an Radisson Blu rooftop terrace"
             loading="lazy"
             className="h-full w-full object-cover"
           />
@@ -105,12 +105,12 @@ export default function FinalSection() {
             To top ↑
           </a>
           <a
-            href="https://thefirstthelast.agency/"
+            href="https://midas.online"
             className="text-left min-[992px]:text-right"
           >
-            Original design by
+            Designed and Developed by
             <br />
-            <strong>Thefirstthelast</strong>
+            <strong>Midas Online</strong>
           </a>
         </div>
       </footer>

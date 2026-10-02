@@ -123,7 +123,7 @@ export default function Header() {
         <a
           data-header-part
           href="#hero"
-          aria-label="ERA Residence — back to top"
+          aria-label="Radisson Blu — back to top"
           className="fixed left-[5.77vw] top-[5.77vw] flex aspect-square w-[19.23vw] items-center justify-center min-[992px]:left-[3vw] min-[992px]:top-[3vw] min-[992px]:w-[8.5vw]"
         >
           <span

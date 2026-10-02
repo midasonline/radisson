@@ -22,10 +22,21 @@ export default function AmenitiesSection() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-      gsap.fromTo("[data-amenity-active]", { clipPath: "inset(100% 0 0 0)", scale: 1.08 },
-        { clipPath: "inset(0% 0 0 0)", scale: 1, duration: 1.2, ease: "eraOut" });
-      gsap.fromTo("[data-amenity-text]", { yPercent: 110 },
-        { yPercent: 0, duration: .8, stagger: .1, ease: "eraOut" });
+      gsap.fromTo(
+        "[data-amenity-active]",
+        { clipPath: "inset(100% 0 0 0)", scale: 1.08 },
+        {
+          clipPath: "inset(0% 0 0 0)",
+          scale: 1,
+          duration: 1.2,
+          ease: "eraOut",
+        },
+      );
+      gsap.fromTo(
+        "[data-amenity-text]",
+        { yPercent: 110 },
+        { yPercent: 0, duration: 0.8, stagger: 0.1, ease: "eraOut" },
+      );
     }, root);
     return () => ctx.revert();
   }, [index]);
@@ -55,15 +66,23 @@ export default function AmenitiesSection() {
           className="absolute inset-0 flex flex-col justify-between px-[7vw] py-[17vh] min-[992px]:px-[12vw] min-[992px]:py-[11vh]"
         >
           <div className="absolute bottom-[6vh] left-[8vw] w-[80vw] min-[992px]:left-[12.5vw] min-[992px]:w-[38vw]">
-            <h2 data-amenity-text className="mb-7 text-[9px] font-bold uppercase min-[992px]:ml-[9.5vw]">
+            <h2
+              data-amenity-text
+              className="mb-7 text-[9px] font-bold uppercase min-[992px]:ml-[9.5vw]"
+            >
               {amenities[index].title}
             </h2>
-            <p data-amenity-text className="font-display text-[7vw] uppercase leading-[1.05] min-[992px]:text-[2.5vw]">
+            <p
+              data-amenity-text
+              className="font-display text-[7vw] uppercase leading-[1.05] min-[992px]:text-[2.5vw]"
+            >
               {amenities[index].text}
             </p>
           </div>
           <div className="flex items-end justify-between gap-6">
-            <div className="absolute bottom-[6vh] right-[17vw] hidden min-[992px]:block"><CircleCTA call>Book a call now</CircleCTA></div>
+            <div className="absolute bottom-[6vh] right-[17vw] hidden min-[992px]:block">
+              <CircleCTA call>Book a CONSULTATION</CircleCTA>
+            </div>
             <div
               role="tablist"
               aria-label="Amenities"

@@ -1,4 +1,4 @@
-# ERA Residence — local homepage
+# Radisson Blu — local homepage
 
 Next.js App Router · React · TypeScript · Tailwind CSS 4 · GSAP + ScrollTrigger · Lenis.
 

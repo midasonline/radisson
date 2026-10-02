@@ -97,7 +97,7 @@ export default function LocationPanoramaSection() {
           <img
             ref={photo}
             src={assets.location}
-            alt="Aerial view of ERA Residence and the Estepona coastline"
+            alt="Aerial view of Radisson Blu, Islamabad"
             loading="lazy"
             draggable={false}
             className="relative left-[-50%] h-full w-[200%] max-w-none select-none object-cover min-[992px]:left-0 min-[992px]:w-full"
@@ -129,7 +129,7 @@ export default function LocationPanoramaSection() {
 
             <div className="mt-[17px] border-y border-white/35 py-[8px] min-[992px]:mt-[28px] min-[992px]:py-[10px]">
               {/* <p className="font-accent text-[15px] leading-none min-[992px]:text-[17px]"> */}
-                <p className="text-[15px] leading-none min-[992px]:text-[17px]">
+              <p className="text-[15px] leading-none min-[992px]:text-[17px]">
                 Costa del Sol
               </p>
             </div>
