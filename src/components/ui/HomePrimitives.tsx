@@ -91,7 +91,7 @@ export function Flower({
   );
 }
 export function CircleCTA({
-  children = "EXPLORE OUR SPACES",
+  children = "BOOK A CONSULTATION",
   call = false,
   className = "",
 }: {

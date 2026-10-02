@@ -90,15 +90,18 @@ export const interiors = [
   "/images/6a1575-era-residence-kitchen.webp",
 ];
 export const projectDetails = [
-  { title: "Developer", text: "Swiss Technology S.L." },
-  { title: "Sales & Marketing", text: "Unreal Estate Group" },
   {
-    title: "License obtained",
-    text: "The project holds all required permits and an active construction license. All documentation is publicly available. Construction is already underway — visit the site in person or follow progress via our live online stream.",
+    title: "THE DEVELOPER",
+    text: "Presented by J7 Global, the project brings hotel accommodation, residences and retail together in Mumtaz City, Islamabad.",
+  },
+  { title: "PROJECT PROGRESS", text: "Follow the development through construction updates and live site views, from structural works through to the detailing of its interiors." },
+  {
+    title: "PAYMENT PLANS",
+    text: "Payment options include a 40% down payment and six installments. Request the current schedule and terms for your chosen suite, residence or shop.",
   },
   {
-    title: "2026",
-    text: "Currently under construction. The first phase of construction is underway, with ongoing development of the apartments and communal areas. Potential buyers can anticipate a modern living space upon completion of the build.",
+    title: "2027",
+    text: "Project delivery is targeted for 2027. Follow the latest construction updates or speak with our team about the anticipated completion and handover schedule.",
   },
 ];
 export const hotspots = [

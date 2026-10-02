@@ -49,21 +49,20 @@ export default function FinalSection() {
         </div>
         <div className="relative flex h-full flex-col items-center px-[8vw] py-[13vw] text-center min-[992px]:pt-[3vw]">
           <Eyebrow className="max-w-[650px] min-[992px]:w-[37vw]">
-            A short conversation is enough to understand which apartment fits
-            your use case — whether it is a family second home, a longer stay,
-            or a place to return to year after year.
+            A residence to make your own, a suite for time in the capital, or a
+            setting for your brand. Let’s find the space that fits.
           </Eyebrow>
           <div className="mt-[17vw]">
             <h2 className="font-display text-[23vw] uppercase leading-[.86] min-[992px]:text-[12vw]">
-              Perfect
+              YOUR PLACE
               <br />
-              sea views
+              IN ISLAMABAD
             </h2>
             <h3 className="mt-[2vw] font-display text-[5vw] uppercase tracking-[.8em] min-[992px]:text-[1.5625vw]">
-              From rooftop terraces
+              SUITES · RESIDENCES · RETAIL
             </h3>
           </div>
-          <CircleCTA className="mt-[10vw]"/>
+          <CircleCTA className="mt-[10vw]" />
         </div>
       </section>
       <footer
@@ -78,25 +77,25 @@ export default function FinalSection() {
         >
           <Mark />
           <a
-            href="tel:+34655408648"
+            href="tel:+923311111033 "
             className="mt-6 whitespace-nowrap font-display text-[11vw] leading-none min-[992px]:text-[8.5vw]"
           >
-            +34 (655) 408-648
+            +92 331 1111 033
           </a>
-          <Eyebrow className="mt-12">Sales Office</Eyebrow>
+          <Eyebrow className="mt-12">Address</Eyebrow>
           <a
-            href="https://maps.app.goo.gl/EzyfT2M6vR5aBdMu9"
+            href="https://maps.app.goo.gl/cinMMChcaWVpV3cm7"
             className="mt-2 text-[10px] font-bold uppercase leading-relaxed"
           >
-            Avenida Litoral, 29680
+            Main Srinagar Highway, Mumtaz City
             <br />
-            Estepona, Málaga, Spain
+            Near Islamabad International Airport
           </a>
         </div>
         <div className="mt-24 flex flex-col gap-6 text-[9px] uppercase leading-relaxed min-[992px]:flex-row min-[992px]:items-end min-[992px]:justify-between">
           <div>
-            <strong>Era Residence.</strong>
-            <p>©2026 All rights reserved</p>
+            <strong>Radisson Blu</strong>
+            <p>© 2026 Radisson Blu Islamabad. All rights reserved.</p>
             <div className="mt-4 flex gap-3">
               <a href="/documents/privacy-policy.pdf">Privacy policy</a>
               <a href="/documents/terms-of-use.pdf">Terms of Use</a>
