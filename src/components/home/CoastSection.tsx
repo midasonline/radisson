@@ -12,11 +12,11 @@ export default function CoastSection() {
       className="relative w-full shrink-0 overflow-hidden bg-era-cream px-[8vw] pb-[12vw] pt-[10vw] text-center min-[992px]:flex min-[992px]:h-svh min-[992px]:w-[94vw] min-[992px]:flex-col min-[992px]:justify-between min-[992px]:px-[9.5vw] min-[992px]:py-[3vw]"
     >
       <h2 className="relative z-10 font-display text-[12vw] uppercase leading-[.9] min-[992px]:mt-auto min-[992px]:mb-auto min-[992px]:text-[6vw]">
-        The coast you wanted
+        THE CAPITAL WITHIN REACH
         <span className="block -rotate-12 font-accent normal-case leading-[.7]">
-          yours
+          the world
         </span>
-        This year
+        BEYOND
       </h2>
       <Flower
         variant="03"

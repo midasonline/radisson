@@ -104,9 +104,9 @@ export default function ReasonsSection() {
           </text>
         </svg>
         <div className="flex items-center gap-[3vw]">
-          <Eyebrow>Costa</Eyebrow>
+          <Eyebrow>HOTELS</Eyebrow>
           <Mark className="min-[992px]:size-[3vw]" />
-          <Eyebrow>Del Sol</Eyebrow>
+          <Eyebrow>RESIDENCES</Eyebrow>
         </div>
         <span className="my-[3vw] h-[13vw] w-px bg-current/30" />
         <Eyebrow className="text-center">

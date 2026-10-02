@@ -91,7 +91,7 @@ export function Flower({
   );
 }
 export function CircleCTA({
-  children = "EXPLORE THE PROJECT",
+  children = "EXPLORE OUR SPACES",
   call = false,
   className = "",
 }: {
@@ -151,7 +151,7 @@ export function SliderControls({
           style={{ width: `${((index + 1) / count) * 100}%` }}
         />
       </span>
-      <span>{(index + 1) % count + 1}</span>
+      <span>{((index + 1) % count) + 1}</span>
       <button
         type="button"
         aria-label="Next slide"

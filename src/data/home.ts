@@ -29,11 +29,11 @@ export const reasons = [
 ];
 export const residences = [
   {
-    title: "Ground floor + basement",
-    bedrooms: "3",
+    title: "RESIDENTIAL SUITES",
+    bedrooms: "1, 2 & 3",
     area: "178 — 202 m²",
     image: "/images/6a1514-era-residence-ground-floor-basement.webp",
-    text: "Private basement, direct outdoor access and a dedicated lower level.",
+    text: "INTERIORS FURNISHED <br>Your own living room, an equipped kitchenette and space to settle into familiar routines. Residences designed for longer stays and life at your pace.",
     type: "ground-floor-basement",
     link: "Explore Ground + basement",
   },
@@ -103,20 +103,20 @@ export const projectDetails = [
 ];
 export const hotspots = [
   {
-    title: "Crafted to Endure",
-    text: "Natural stone façades were selected for their timeless appearance, durability and ease of maintenance, allowing the architecture to age beautifully over time.",
+    title: "SPACE TO CALL YOUR OWN",
+    text: "Separate living areas, equipped kitchenettes and a choice of one, two or three bedrooms create room for your own routines.",
     x: "57.5%",
     y: "62.5%",
   },
   {
-    title: "Light & Flow",
-    text: "Terraces, rooftop solariums and expansive openings maximize natural light while creating a seamless indoor outdoor lifestyle.",
+    title: "A STAY IN THE CAPITAL",
+    text: "Furnished suites with tea and coffee facilities, an in-room refrigerator and space to unwind between meetings, journeys and days spent exploring Islamabad.",
     x: "26.9%",
     y: "58.3%",
   },
   {
-    title: "Your Private Sanctuary",
-    text: "Instead of corridors, walking paths connect the apartments — making Era Residence feel closer to a group of private homes than a standard apartment building.",
+    title: "A PLACE FOR YOUR BRAND",
+    text: "Retail spaces within a destination planned around hotel guests, residents and visitors. A setting where your brand becomes part of the everyday.",
     x: "76.6%",
     y: "73.2%",
   },
