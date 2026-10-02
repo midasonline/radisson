@@ -210,7 +210,7 @@ export default function ResidencesSection() {
 
         <Flower
           variant="04"
-          className="pointer-events-none absolute -bottom-[15vw] -left-[16vw] z-10 w-[68vw] -scale-y-100 min-[992px]:-bottom-[18vw] min-[992px]:-left-[6vw] min-[992px]:w-[38vw]"
+          className="pointer-events-none absolute -bottom-[15vw] -left-[16vw] z-10 w-[68vw] -scale-y-100 min-[992px]:-bottom-[0vw] min-[992px]:-left-[6vw] min-[992px]:w-[38vw]"
         />
       </div>
     </section>
