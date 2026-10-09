@@ -143,7 +143,7 @@ export default function ArchitectureSection() {
           <div className="overflow-hidden">
             <h2
               data-arch-heading
-              className="text-center font-display text-[17vw] uppercase leading-none min-[992px]:text-[15vw]"
+              className="text-center font-display text-[17vw] uppercase leading-none min-[992px]:text-[10vw]"
             >
               Architecture
             </h2>

@@ -2,30 +2,50 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap, ScrollTrigger } from "@/lib/animations";
+
 import SymbolIcon from "@/components/ui/symbol";
 import DesktopRing from "@/components/ui/ring-desktop";
 import MobileRing from "@/components/ui/ring-mobile";
 import RollingLabel from "@/components/ui/RollingLabel";
+
 import FullscreenMenu from "./FullscreenMenu";
 import BookCallDialog from "./BookCallDialog";
 
-/** Later sections use data-header-theme="light" (dark text) or "dark" (white text). */
+/**
+ * Sections use:
+ * data-header-theme="light" => dark header
+ * data-header-theme="dark"  => white header
+ */
 export default function Header() {
   const scope = useRef<HTMLElement>(null);
+
   const [overlay, setOverlay] = useState<"menu" | "call" | null>(null);
+  const [logoVariant, setLogoVariant] = useState<"light" | "dark">("light");
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const media = gsap.matchMedia();
+
+      /**
+       * ROTATING RADISSON TEXT RING
+       */
       media.add("(prefers-reduced-motion: no-preference)", () => {
-        const speed = { value: 30 };
+        const speed = {
+          value: 30,
+        };
+
         let angle = 0;
+
         const ring = gsap.quickSetter("[data-logo-ring]", "rotation", "deg");
+
         const update = (_time: number, delta: number) => {
           angle += (speed.value * Math.min(delta, 100)) / 1000;
+
           ring(angle);
         };
+
         gsap.ticker.add(update);
+
         const decelerate = gsap
           .delayedCall(0.1, () => {
             gsap.to(speed, {
@@ -36,11 +56,14 @@ export default function Header() {
             });
           })
           .pause();
+
         ScrollTrigger.create({
           start: 0,
           end: "max",
+
           onUpdate: (self) => {
             const velocity = self.getVelocity();
+
             gsap.to(speed, {
               value:
                 self.direction * (30 + Math.min(Math.abs(velocity) / 6, 360)),
@@ -48,69 +71,120 @@ export default function Header() {
               ease: "eraOut",
               overwrite: true,
             });
+
             decelerate.restart(true);
           },
         });
+
         return () => {
           gsap.ticker.remove(update);
           decelerate.kill();
           gsap.killTweensOf(speed);
         };
       });
+
+      /**
+       * HEADER COLOUR + LOGO VARIANT SWITCHING
+       */
       const parts =
-        document.querySelectorAll<HTMLElement>("[data-header-part]") ??
-        [];
+        document.querySelectorAll<HTMLElement>("[data-header-part]") ?? [];
+
       const sections = document.querySelectorAll<HTMLElement>(
         "[data-header-theme]",
       );
+
       sections.forEach((section) => {
         parts.forEach((part) => {
           const apply = () => {
             const bounds = part.getBoundingClientRect();
             const region = section.getBoundingClientRect();
+
             const x = bounds.left + bounds.width / 2;
-            if (x < region.left || x > region.right) return;
+
+            if (x < region.left || x > region.right) {
+              return;
+            }
+
+            const isDarkSection = section.dataset.headerTheme === "dark";
+
+            const headerColor = isDarkSection ? "#ffffff" : "#17233b";
+
             gsap.set(part, {
-              color:
-                section.dataset.headerTheme === "dark" ? "#ffffff" : "#17233b",
+              color: headerColor,
             });
+
+            /**
+             * Only the logo anchor controls the
+             * light/dark logo image swap.
+             */
+            if (part.hasAttribute("data-logo-tone-part")) {
+              setLogoVariant(isDarkSection ? "light" : "dark");
+            }
           };
+
           ScrollTrigger.create({
             trigger: section,
+
             start: () => {
               const r = part.getBoundingClientRect();
+
               return `top top+=${r.top + r.height / 2}`;
             },
+
             end: () => {
               const r = part.getBoundingClientRect();
+
               return `bottom top+=${r.top + r.height / 2}`;
             },
+
             onEnter: apply,
             onEnterBack: apply,
+
             onRefresh: (self) => {
-              if (self.isActive) apply();
+              if (self.isActive) {
+                apply();
+              }
             },
           });
         });
       });
     }, scope);
+
     return () => ctx.revert();
   }, []);
 
+  /**
+   * BOOK CALL EVENT
+   */
   useEffect(() => {
-    const book = () => setOverlay("call");
+    const book = () => {
+      setOverlay("call");
+    };
+
     window.addEventListener("era:book-call", book);
-    return () => window.removeEventListener("era:book-call", book);
+
+    return () => {
+      window.removeEventListener("era:book-call", book);
+    };
   }, []);
 
+  /**
+   * CLOSE MOBILE MENU WHEN SWITCHING TO DESKTOP
+   */
   useEffect(() => {
     const desktop = window.matchMedia("(min-width: 992px)");
+
     const closeMobileMenu = () => {
-      if (desktop.matches)
+      if (desktop.matches) {
         setOverlay((current) => (current === "menu" ? null : current));
+      }
     };
+
     desktop.addEventListener("change", closeMobileMenu);
-    return () => desktop.removeEventListener("change", closeMobileMenu);
+
+    return () => {
+      desktop.removeEventListener("change", closeMobileMenu);
+    };
   }, []);
 
   return (
@@ -120,42 +194,117 @@ export default function Header() {
         aria-label="Site header"
         className="relative z-50 text-era-ink"
       >
+        {/* ========================================
+            RADISSON LOGO
+            ======================================== */}
+
         <a
           data-header-part
+          data-logo-tone-part
           href="#hero"
           aria-label="Radisson Blu — back to top"
-          className="fixed left-[5.77vw] top-[5.77vw] flex aspect-square w-[19.23vw] items-center justify-center min-[992px]:left-[3vw] min-[992px]:top-[3vw] min-[992px]:w-[8.5vw]"
+          className="
+            fixed
+            left-[5.77vw]
+            top-[5.77vw]
+            flex
+            aspect-square
+            w-[19.23vw]
+            items-center
+            justify-center
+
+            min-[992px]:left-[3vw]
+            min-[992px]:top-[3vw]
+            min-[992px]:w-[8.5vw]
+          "
         >
+          {/* STATIC CENTER LOGO */}
+
           <span
             aria-hidden="true"
-            className="relative z-10 block size-[7.69vw] min-[992px]:size-[3vw]"
+            className="
+              relative
+              z-10
+              flex
+              w-[10.5vw]
+              items-center
+              justify-center
+
+              min-[992px]:w-[4.5vw]
+            "
           >
-            <SymbolIcon />
+            <SymbolIcon variant={logoVariant} />
           </span>
+
+          {/* DESKTOP ROTATING RADISSON RING */}
+
           <span
             aria-hidden="true"
             data-logo-ring
-            className="absolute inset-0 hidden min-[992px]:block"
+            className="
+              absolute
+              inset-0
+              hidden
+              origin-center
+
+              min-[992px]:block
+            "
           >
             <DesktopRing />
           </span>
+
+          {/* MOBILE ROTATING RADISSON RING */}
+
           <span
             aria-hidden="true"
             data-logo-ring
-            className="absolute inset-0 block min-[992px]:hidden"
+            className="
+              absolute
+              inset-0
+              block
+              origin-center
+
+              min-[992px]:hidden
+            "
           >
             <MobileRing />
           </span>
         </a>
+
+        {/* ========================================
+            NAVIGATION
+            ======================================== */}
+
         <nav
           data-header-part
           aria-label="Primary navigation"
-          className="fixed right-[5.77vw] top-[5.77vw] text-right min-[992px]:right-[3vw] min-[992px]:top-[3vw] min-[992px]:w-[8.5vw]"
+          className="
+            fixed
+            right-[5.77vw]
+            top-[5.77vw]
+            text-right
+
+            min-[992px]:right-[3vw]
+            min-[992px]:top-[3vw]
+            min-[992px]:w-[8.5vw]
+          "
         >
+          {/* DESKTOP NAVIGATION */}
+
           <div className="hidden flex-col items-end min-[992px]:flex">
             <a
               href="https://www.era-residence.com/apartments"
-              className="group block border-b border-current pb-[.25vw] font-display text-[1.75vw] uppercase leading-none"
+              className="
+                group
+                block
+                border-b
+                border-current
+                pb-[.25vw]
+                font-display
+                text-[1.75vw]
+                uppercase
+                leading-none
+              "
             >
               <RollingLabel>
                 Select
@@ -163,31 +312,70 @@ export default function Header() {
                 an Apartment
               </RollingLabel>
             </a>
+
             <div className="h-[1.5vw]" />
+
             <button
               onClick={() => setOverlay("call")}
               type="button"
               aria-haspopup="dialog"
-              className="group block font-body text-[.5625vw] font-bold uppercase leading-[1.3333] tracking-[.32em]"
+              className="
+                group
+                block
+                font-body
+                text-[.5625vw]
+                font-bold
+                uppercase
+                leading-[1.3333]
+                tracking-[.32em]
+              "
             >
               <RollingLabel>Book a call</RollingLabel>
             </button>
+
             <div className="h-[.25vw]" />
+
             <a
               href="https://www.era-residence.com/contact"
-              className="group block font-body text-[.5625vw] font-bold uppercase leading-[1.3333] tracking-[.32em]"
+              className="
+                group
+                block
+                font-body
+                text-[.5625vw]
+                font-bold
+                uppercase
+                leading-[1.3333]
+                tracking-[.32em]
+              "
             >
               <RollingLabel>Contact</RollingLabel>
             </a>
           </div>
+
+          {/* MOBILE MENU BUTTON */}
+
           <button
             onClick={() => setOverlay("menu")}
             type="button"
             aria-haspopup="dialog"
             aria-expanded={overlay === "menu"}
-            className="group flex min-h-11 items-center gap-1 font-body text-[2.164vw] font-bold uppercase tracking-[.32em] min-[992px]:hidden"
+            className="
+              group
+              flex
+              min-h-11
+              items-center
+              gap-1
+              font-body
+              text-[2.164vw]
+              font-bold
+              uppercase
+              tracking-[.32em]
+
+              min-[992px]:hidden
+            "
           >
             <RollingLabel>Menu</RollingLabel>
+
             <svg
               aria-hidden="true"
               viewBox="0 0 24 24"
@@ -200,11 +388,21 @@ export default function Header() {
           </button>
         </nav>
       </header>
+
+      {/* ========================================
+          FULLSCREEN MENU
+          ======================================== */}
+
       <FullscreenMenu
         open={overlay === "menu"}
         onClose={() => setOverlay(null)}
         onBookCall={() => setOverlay("call")}
       />
+
+      {/* ========================================
+          BOOK CALL DIALOG
+          ======================================== */}
+
       <BookCallDialog
         open={overlay === "call"}
         onClose={() => setOverlay(null)}

@@ -138,7 +138,7 @@ export default function Preloader() {
         </div>
         <div className="grid grid-cols-10 gap-[1vw] items-center text-center">
           <span className="col-span-2 col-start-2 hidden font-display text-[1.5625vw] tracking-[.8em] min-[992px]:block">
-            COSTA
+            Hotels
           </span>
           <div className="col-span-10 min-[992px]:col-span-4 min-[992px]:col-start-4">
             <div className="overflow-hidden">
@@ -161,7 +161,7 @@ export default function Preloader() {
             </div>
           </div>
           <span className="col-span-2 col-start-8 hidden font-display text-[1.5625vw] tracking-[.8em] min-[992px]:block">
-            DEL SOL
+            Residences
           </span>
         </div>
         <div className="flex flex-1 flex-col items-center justify-end gap-[2vw] pb-[6vw] min-[992px]:pb-[3vw]">

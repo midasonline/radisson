@@ -2,6 +2,11 @@
 @source "../";
 @import "lenis/dist/lenis.css";
 
+/* =========================================
+   MAISON NEUE EXTENDED
+   Body / UI font
+   ========================================= */
+
 @font-face {
   font-family: "Maison Neue Extended";
   src: url("/fonts/MaisonNeueExt-Book.woff2") format("woff2");
@@ -9,6 +14,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Maison Neue Extended";
   src: url("/fonts/MaisonNeueExt-Bold.woff2") format("woff2");
@@ -16,16 +22,25 @@
   font-style: normal;
   font-display: swap;
 }
-/* Original reference font families, bundled for the requested local reconstruction. */
+
+/* =========================================
+   FABYEN
+   Display / Heading font
+   ========================================= */
+
 @font-face {
-  font-family: "Ambroise Francois";
-  src:
-    local("Ambroise Francois Std"),
-    url("/fonts/ambroise-francois-regular.woff2") format("woff2");
+  font-family: "Fabyen";
+  src: url("/fonts/Fabyen-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+
+/* =========================================
+   SLOOP SCRIPT THREE
+   Accent font
+   ========================================= */
+
 @font-face {
   font-family: "Sloop Script Three";
   src:
@@ -35,38 +50,57 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* =========================================
+   TAILWIND THEME
+   ========================================= */
+
 @theme inline {
   --font-body: "Maison Neue Extended", Arial, sans-serif;
-  --font-display: "Ambroise Francois", "Times New Roman", serif;
+
+  --font-display: "Fabyen", Arial, sans-serif;
+
   --font-accent: "Sloop Script Three", cursive;
-  --color-era-plum: #340c24;
+
+  --color-era-plum: #2957a4;
   --color-era-cream: #f3f3ec;
   --color-era-sky: #b5cedb;
   --color-era-pink: #f8bbcb;
   --color-era-ink: #17233b;
 }
+
+/* =========================================
+   GLOBAL
+   ========================================= */
+
 html {
   -webkit-text-size-adjust: 100%;
 }
+
 body {
   margin: 0;
 }
+
 button,
 a,
 input,
 textarea {
   -webkit-tap-highlight-color: transparent;
 }
+
 button {
   cursor: pointer;
 }
+
 button:disabled {
   cursor: not-allowed;
 }
+
 ::selection {
-  background: #340c24;
-  color: #f3f3ec;
+  background: #2957a4;
+  color: #fff;
 }
+
 :focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 5px;
@@ -76,9 +110,11 @@ html,
 body {
   overflow-x: clip;
 }
+
 html {
   scroll-padding-top: 2rem;
 }
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

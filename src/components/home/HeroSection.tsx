@@ -133,7 +133,7 @@ export default function HeroSection() {
           <h2 className="relative -mt-[2vw] -rotate-12 font-accent text-[23vw] leading-[.8] min-[992px]:-ml-[2vw] min-[992px]:-mt-[1vw] min-[992px]:text-[7.5vw]">
             Islamabad
           </h2>
-          <div className="mx-auto mt-[9vw] grid w-[88%] grid-cols-2 items-center gap-y-6 min-[992px]:mt-[3vw] min-[992px]:w-[56%] min-[992px]:grid-cols-[1fr_1fr_1fr]">
+          <div className="mx-auto mt-[9vw] grid w-[88%] grid-cols-2 items-center gap-y-6 min-[992px]:mt-[13vw] min-[992px]:w-[56%] min-[992px]:grid-cols-[1fr_1fr_1fr]">
             <h3 className="text-left font-display text-[7vw] uppercase leading-none min-[992px]:text-[2.5vw]">
               HOTEL & RESIDENCES
             </h3>

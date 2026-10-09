@@ -1,9 +1,11 @@
 "use client";
+
 import { useRef } from "react";
 import { assets } from "@/data/home";
-import { Flower } from "@/components/ui/HomePrimitives";
+
 export default function CoastSection() {
   const root = useRef<HTMLElement>(null);
+
   return (
     <section
       ref={root}
@@ -18,17 +20,38 @@ export default function CoastSection() {
         </span>
         BEYOND
       </h2>
-      <Flower
-        variant="03"
-        className="absolute -right-[14vw] top-0 w-[50vw] min-[992px]:w-[50vw]"
+
+      {/* VIDEO FLOWER OVERLAY */}
+      <video
+        src="/images/bougainvillea-flowers_03.webm"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          -right-[14vw]
+          -scale-x-100
+          top-0
+          z-0
+          w-[50vw]
+          max-w-none
+
+          min-[992px]:w-[50vw]
+        "
       />
-      <div className="relative mt-[12vw] w-full overflow-x-auto min-[992px]:mt-0">
+
+      <div className="relative z-10 mt-[12vw] w-full overflow-x-auto min-[992px]:mt-0">
         <img
           src={assets.coastLabels}
           alt="Gibraltar 50 min, Estepona 10 min, Kempinski 5 min, Puerto Banús 20 min, Marbella 25 min, Málaga Airport 45 min"
           loading="lazy"
           className="w-full"
         />
+
         <img
           data-coast-path
           src={assets.coast}
