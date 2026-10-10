@@ -13,17 +13,17 @@ export const assets = {
 export const reasons = [
   {
     title: "A GLOBAL WELCOME",
-    image: "/images/6a150a-img_cam_02222.webp",
+    image: "/images/6a150a-img_cam_02.webp",
     text: "Radisson Blu’s international hospitality meets the rhythm of Islamabad, with accommodation and shared spaces designed for business travelers, visiting families and longer stays.",
   },
   {
     title: "WELL CONNECTED",
-    image: "/images/6a150b-era-residence-terrace222.webp",
+    image: "/images/6a150b-era-residence-terrace.webp",
     text: "An address on Srinagar Highway, close to Islamabad International Airport. Planned for convenient arrivals, onward journeys and a comfortable return at the end of the day.",
   },
   {
     title: "LIFE, ALL TOGETHER",
-    image: "/images/6a150c-era-residence-garden222.webp",
+    image: "/images/6a150c-era-residence-garden.webp",
     text: "Dinner, a workout, a meeting or an unhurried evening. Dining, wellness, business facilities and retail are planned alongside your suite or residence.",
   },
 ];
