@@ -19,9 +19,9 @@ export default function CommunityQuoteSection() {
       <div className="absolute bottom-[3vw] left-[50.5vw] hidden w-[37vw] min-[992px]:block">
         <Mark className="mb-[2vw] ml-[9.5vw] size-[3vw]" />
         <h2 className="font-display text-[2.5vw] uppercase leading-none tracking-[-.008em]">
-          <span className="inline-block w-[9.5vw]" />A destination designed to
-          bring staying, living and everyday life together, creating an address
-          that feels connected to Islamabad, yet removed from its pace.
+          <span className="inline-block w-[9.5vw]" />
+          An address where staying, living, and everyday life come together,
+          connected to Islamabad yet removed from its pace.
         </h2>
         <Eyebrow className="mt-[4vw]">
           RADISSON BLU ISLAMABAD

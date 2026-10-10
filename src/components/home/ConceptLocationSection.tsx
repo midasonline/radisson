@@ -92,8 +92,9 @@ export default function ConceptLocationSection() {
             <div className="relative min-[992px]:w-[56vw]">
               <Eyebrow>THE PROJECT VISION</Eyebrow>
               <h2 className="mt-[2vw] font-display text-[9.615vw] uppercase leading-[.88889] tracking-[-.016em] min-[992px]:text-[3.9375vw]">
-                AN ISLAMABAD ADDRESS WHERE HOTEL HOSPITALITY, PRIVATE RESIDENCES
-                AND RETAIL ARE PLANNED AROUND THE WAY YOU LIVE, WORK AND UNWIND.
+                An Islamabad address where hotel hospitality, private
+                residences, and retail come together to shape the way you live,
+                work, and unwind.
               </h2>
             </div>
             <div className="relative mt-[12vw] flex flex-col items-center justify-end min-[992px]:mt-0 min-[992px]:flex-1">

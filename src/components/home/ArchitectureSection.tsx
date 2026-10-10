@@ -152,8 +152,7 @@ export default function ArchitectureSection() {
             <div className="min-[992px]:ml-[9.5vw] min-[992px]:w-[37vw]">
               <h3 className="font-display text-[9vw] uppercase leading-[.98] min-[992px]:text-[2.5vw]">
                 A distinct presence on Srinagar Highway, bringing private spaces
-                and shared experiences into one contemporary hotel and
-                residential address.
+                and shared experiences into one address.
               </h3>
               <p className="mt-10 text-[10px] uppercase leading-relaxed">
                 RADISSON BLU ISLAMABAD

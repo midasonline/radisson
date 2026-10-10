@@ -65,17 +65,17 @@ export const amenities = [
   {
     title: "Rooftop Restaurant",
     image: "/images/6a1512-era-residence-pool.jpg",
-    text: "Experience elevated dining at the Rooftop Restaurants, where premium Turkish & Pakistani cuisine meets an exclusive rooftop atmosphere.",
+    text: "Experience elevated rooftop dining with premium Turkish & Pakistani cuisine at Radisson Blu Islamabad.",
   },
   {
     title: "Banquet Hall",
     image: "/images/6a1573-era-residence-parking.jpg",
-    text: "Designed for weddings, corporate functions, celebrations, and prestigious social gatherings, the elegant venue combines grandeur, sophisticated surroundings, and the signature hospitality experience of Radisson Blu Islamabad.",
+    text: "Host weddings, corporate events, and celebrations in an elegant venue defined by grandeur and Radisson Blu hospitality.",
   },
   {
     title: "Indoor Pool",
     image: "/images/6a1513-era-residence-spa-and-gym.jpg",
-    text: "Designed as an exclusive wellness retreat, the pool offers guests and residents a serene environment for swimming, relaxation, and rejuvenation throughout the year.",
+    text: "An exclusive wellness retreat offering guests and residents a serene setting for swimming, relaxation, and year-round refreshment.",
   },
   {
     title: "Executive Lounge",

@@ -54,13 +54,6 @@ function Detail({
         className="h-0 overflow-hidden opacity-0"
       >
         <div className="mx-auto max-w-[440px] py-6 text-xs leading-relaxed">
-          {i === 1 && (
-            <img
-              src="/images/6a1577-Unreal-logo.svg"
-              alt="Unreal Estate Group"
-              className="mx-auto mb-4 w-24"
-            />
-          )}
           <p>{text}</p>
         </div>
       </div>
